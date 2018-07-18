@@ -32,7 +32,7 @@ class Person:
 
     def takeDamage(self,dmg):
         self.healthpoint = self.healthpoint-dmg
-        if(self.healthpoint<0)
+        if(self.healthpoint<0):
             self.healthpoint = 0
         return self.healthpoint
 
@@ -59,5 +59,15 @@ class Person:
 
     def chooseAction(self):
         i=1
+        print("Actions")
         for items in self.actions:
-            print (str(i)+ ":",)
+            print (str(i)+ ":",items)
+            i+=1
+
+    def chooseMagic(self):
+        i=1
+        print("Magics")
+        for spell in self.magic:
+            print(str(i)+":",spell["name"],"(cost:",str(spell["np"]) + ")")
+            i+=1
+
